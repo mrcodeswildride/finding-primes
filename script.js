@@ -1,6 +1,6 @@
 let number = document.getElementById(`number`)
 let primesButton = document.getElementById(`primesButton`)
-let primesParagraph = document.getElementById(`primesParagraph`)
+let box = document.getElementById(`box`)
 
 primesButton.addEventListener(`click`, findPrimes)
 
@@ -12,7 +12,7 @@ function findPrimes() {
 
   if (numberValue != `` && !isNaN(numberValue)) {
     if (numberValue < 2 || numberValue > 10000) {
-      primesParagraph.innerHTML = `Upper bound must be between 2 and 10,000.`
+      box.innerHTML = `Upper bound must be between 2 and 10,000.`
     }
     else {
       let crossedOut = []
@@ -25,11 +25,14 @@ function findPrimes() {
         }
       }
 
-      primesParagraph.innerHTML = `Primes:`
+      box.innerHTML = ``
 
       for (let i = 2; i <= numberValue; i++) {
         if (!crossedOut[i]) {
-          primesParagraph.innerHTML = `${primesParagraph.innerHTML} ${i}`
+          let numberDiv = document.createElement(`div`)
+          numberDiv.classList.add(`number`)
+          numberDiv.innerHTML = i
+          box.appendChild(numberDiv)
         }
       }
     }

@@ -14,3 +14,19 @@ button {
 input {
   width: 150px;
 }
+
+#box {
+  font-size: 24px;
+  margin-top: 24px;
+  margin-bottom: 30px;
+}
+
+.number {
+  display: inline-block;
+  font-family: "Courier New", Courier, monospace;
+  margin-right: 20px;
+}
+
+.number:last-child {
+  margin-right: 0;
+}
