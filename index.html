@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Finding Primes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
 
-<head>
-	<title>Finding Primes</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="style.css" rel="stylesheet">
-	<script src="script.js" defer>
+  <body>
+    <h1>Finding Primes</h1>
 
-	</script>
-</head>
+    <p>This program uses the sieve of Eratosthenes to find the primes up to an upper bound.</p>
 
-<body>
-	<h1>Finding Primes</h1>
+    <input
+      type="number"
+      min="2"
+      max="10000"
+      placeholder="upper bound"
+      autocomplete="off"
+      id="number"
+    />
+    <button id="primesButton">Find primes</button>
 
-	<p>
-		This program uses the sieve of Eratosthenes to find the primes up to an upper bound.
-	</p>
-
-	<input type="number" min="2" max="10000" placeholder="upper bound" id="number">
-  <button id="primesButton">Find primes</button>
-
-  <div id="box"></div>
-</body>
-
+    <div id="box"></div>
+  </body>
 </html>
